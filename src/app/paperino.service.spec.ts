@@ -8,10 +8,12 @@ describe('PaperinoService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    //service = TestBed.inject(PaperinoService);
+    // TestBed.configureTestingModule({ providers: [ValueService] });
+    service = TestBed.inject(PaperinoService);
   });
 
   it('should be created', () => {
+    service = new PaperinoService(new PlutoService());
     expect(service).toBeTruthy();
   });
 
